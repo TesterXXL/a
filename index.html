@@ -81,6 +81,7 @@ analyse: 5,
             let s = 0;
             for (const subject in coefficients) {
                 const input = document.getElementById(subject);
+                console.log(input);
                 s += parseFloat(input.value) * coefficients[subject];
             }
             const moyenne = s / totalCoefficient;
@@ -90,7 +91,7 @@ analyse: 5,
         document.querySelectorAll('input').forEach(input => {
             input.addEventListener('input', calculateMoyenne);
         });
-
+        console.log(totalCoefficient);
         calculateMoyenne(); // Initialize the moyenne on page load
     </script>
 </body>
